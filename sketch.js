@@ -30,7 +30,7 @@ function setup() {
   Iinput.input(Bot);
   namebox=createInput("enter your name here")
   namebox.input(namekeep);
-  namebox.position(50,405);
+  namebox.position(100,405);
   search=createButton("search on google");
 }
 
