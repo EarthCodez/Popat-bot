@@ -38,6 +38,7 @@ function draw() {
   background("lime");
   rect(100,0,400,100);
   clock();
+  textFont("Arial", 35);
   textAlign(LEFT,LEFT); 
     shpopat=image(popat,0,0,100,100);
   fill(ctc.color());
