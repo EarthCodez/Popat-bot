@@ -12,7 +12,7 @@ var search;
 
 function preload(){
   ld1=loadImage("oops.jpg");
-   ld=loadImage("what_.jpg");
+   ld=loadImage("what?.jpg");
   hello=loadSound("hello.mp3");
   bye=loadSound("bye.mp3");
   lion=loadSound("lion.mp3");
@@ -36,13 +36,14 @@ function setup() {
 
 function draw() {
   background("lime");
-  rect(100,0,400,100);
+  fill(ctc.color());
   clock();
   textFont("Arial", 35);
   textAlign(LEFT,LEFT); 
     shpopat=image(popat,0,0,100,100);
-  fill(ctc.color());
+  
   textSize(15);
+  text("type help for list of commands")
   if(reply=="are you dumb"){
     text("No, I am smarter than u",10,350);
   }
@@ -112,6 +113,8 @@ function draw() {
 
 function Bot(){
   reply=this.value();
+  if(reply=="help"){ window.open("https://docs.google.com/document/d/13wmia6S1T85P0wxnU8s-VdzXVSGJFoZaGaXEVpjKG2I/edit?usp=sharing")
+  }
   if(reply=="what sound does a lion make"||reply=="make the sound of a lion"||reply=="imitate a lion"||reply=="what sound does a tiger make"||reply=="make the sound of a tiger"||reply=="imitate a tiger"){
     lion.play();
   }
@@ -169,10 +172,10 @@ function gos(){
 }
 
 function clock(){
- fill(clr.color());
+  rect(100,0,400,100);
   textFont(clockFont);
   textAlign(CENTER, CENTER);
-  textSize(width/5.25);
+  textSize(width/5.5);
   let Hour = hour();
   let min = minute();
   let secs = second()
@@ -180,5 +183,6 @@ function clock(){
   if(min < 10)
     min = "0"+min
   Hour%=12
+  fill(clr.color());
   text(Hour+":"+min+":"+secs+noon, 250,50); 
 }
