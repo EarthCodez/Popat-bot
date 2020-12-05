@@ -12,7 +12,7 @@ var search;
 
 function preload(){
   ld1=loadImage("oops.jpg");
-   ld=loadImage("what?.jpg");
+   ld=loadImage("what_.jpg");
   hello=loadSound("hello.mp3");
   bye=loadSound("bye.mp3");
   lion=loadSound("lion.mp3");
