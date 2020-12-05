@@ -43,7 +43,7 @@ function draw() {
     shpopat=image(popat,0,0,100,100);
   
   textSize(15);
-  text("type help for list of commands")
+  text("type help for list of commands",10,120)
   if(reply=="are you dumb"){
     text("No, I am smarter than u",10,350);
   }
