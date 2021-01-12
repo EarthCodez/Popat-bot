@@ -133,32 +133,34 @@ function Bot(){
       if(reply=="hello"||reply=="hello popat"||reply=="hi"||reply=="who are you"){
   hello.play();
     }
-      if(this.value()=="open gmail"){
+      if(this.value()=="/open gmail"){
  window.open("https://mail.google.com/mail/u/0/");
   }
-        if(this.value()=="open new tab"){
+        if(this.value()=="/open new tab"){
  window.open("https://www.google.com/");
   }
-          if(this.value()=="open skype"){
+          if(this.value()=="/open skype"){
  window.open("https://web.skype.com/");
   }
-        if(this.value()=="open excel"){
+        if(this.value()=="/open excel"){
  window.open("https://www.office.com/launch/excel");
   }
-        if(this.value()=="open word"){
+        if(this.value()=="/open word"){
  window.open("https://www.office.com/launch/word");
   }
-          if(this.value()=="open powerpoint"){
+          if(this.value()=="/open powerpoint"){
  window.open("https://www.office.com/launch/powerpoint");
   }
-    if(this.value()=="i want to play a game"){
+    if(this.value()=="i want to play a game"||this.value()=="/open games"){
     window.open("https://editor.p5js.org/Paramesh/full/g7Ky2WBWH")
 }
-   if(this.value()=="set timer"||this.value()=="set a timer"||this.value()=="open timer"){
+   if(this.value()=="/set timer"||this.value()=="/set a timer"||this.value()=="/open timer"){
      window.open("https://realparamesh.github.io/Timer/");
    }
-  if(this.value()=="open notepad"||this.value()=="open text editor"){
+  if(this.value()=="/open notepad"||this.value()=="/open text editor"){
     window.open("https://realparamesh.github.io/Text-editor/")
+  }
+    if(this.value()=="/open rubix stimer"||this.value()=="/open rubix app"){ window.open("https://realparamesh.github.io/Rubixs-Stimer/")
   }
 }
 
@@ -166,6 +168,7 @@ function namekeep(){
   name=this.value();
   console.log(name);
 }
+
 
 function gos(){
   window.open("https://www.google.com/search?safe=active&source=hp&ei=11-2X-XRIpq9rQH93rnIAg&q="+reply+"&oq="+reply+"&gs_lcp");
