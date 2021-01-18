@@ -111,8 +111,75 @@ function draw() {
   search.mousePressed(gos);
 }
 
+const synth = window.speechSynthesis;
+
+
+const speak = text => {
+  if (synth.speaking) {
+    console.error('speechSynthesis.speaking');
+    return;
+  }
+  let utterThis = new SpeechSynthesisUtterance(text);
+  utterThis.pitch = 9999;
+  utterThis.rate = 0.7;
+  synth.speak(utterThis);
+};
+
 function Bot(){
   reply=this.value();
+  if(reply=="are you dumb"){
+    speak("No, I am smarter than u");
+  }
+  if(reply=="what os do you use"){
+    speak("I use your operating system")
+  }
+  if(reply=="sup"){
+     speak("sup",10,350);
+     }
+  if(reply=="do you go to school"||reply=="do you go to work"){
+     speak("no, do you?");
+     }
+    if(reply=="hello"||reply=="hello popat"||reply=="hi"||reply=="who are you"){
+    speak("welcome, I am popat, an bot, made by ParameshCodes");
+    }
+  
+  if(reply=="bye"){
+     speak("bye, see you afterwards");
+  }
+  textSize(100);
+  if(reply==":)"){
+    speak("😄");
+  }
+  else if(reply==":("){
+     speak("😭");
+  }
+  else if(reply=="XD"){
+     speak("😆");
+  }
+  else if(reply==":|"){
+      speak("😑");
+  }
+  else if(reply==":D"){
+      speak("😁");
+  }
+  else if(reply==":X"){
+     speak("😶");
+  }
+  textSize(15);
+    if(reply=="123456789"){
+      text("abcdefghi",10,350)
+    }
+    if(keyCode==ENTER&&name!="enter your name here"){
+    namebox.hide();
+  }
+  if(reply=="what"){
+    text("Pardon me",10,350)
+  }
+  if(reply=="memes"||reply=="show memes"){
+  text("ok",10,350);
+  image(ld,10,10,300,200)
+  image(ld1,30,210,280,180)
+  }
   if(reply=="help"){ window.open("https://docs.google.com/document/d/13wmia6S1T85P0wxnU8s-VdzXVSGJFoZaGaXEVpjKG2I/edit?usp=sharing")
   }
   if(reply=="what sound does a lion make"||reply=="make the sound of a lion"||reply=="imitate a lion"||reply=="what sound does a tiger make"||reply=="make the sound of a tiger"||reply=="imitate a tiger"){
@@ -127,12 +194,6 @@ function Bot(){
       if(reply=="what sound does a cat make"||reply=="make the sound of a cat"||reply=="imitate a cat"){
     cat.play();
   }
-    if(reply=="bye"){
-   bye.play();
-  }
-      if(reply=="hello"||reply=="hello popat"||reply=="hi"||reply=="who are you"){
-  hello.play();
-    }
       if(this.value()=="/open gmail"){
  window.open("https://mail.google.com/mail/u/0/");
   }
