@@ -9,7 +9,7 @@ var ld,ld1,hello,bye;
 var popat;
 var lion,parrot,dog,cat;
 var search;
-
+var ti,abc;
 function preload(){
   ld1=loadImage("oops.jpg");
    ld=loadImage("what_.jpg");
@@ -32,10 +32,13 @@ function setup() {
   namebox.input(namekeep);
   namebox.position(100,405);
   search=createButton("search on google");
+  ti=createInput("what to say?")
+  ti.hide();
 }
 
 function draw() {
   background("lime");
+  console.log(keyCode)
   fill(ctc.color());
   clock();
   textFont("Arial", 35);
@@ -221,8 +224,19 @@ function Bot(){
   if(this.value()=="/open notepad"||this.value()=="/open text editor"){
     window.open("https://realparamesh.github.io/Text-editor/")
   }
+  if(this.value()=="/tts"){
+    goo=prompt("what to say?")
+    speak(goo)
+    // ti.show()
+    // // wfi()
+  }
+  if(keyCode==13&&abc==0){
+    speak(ti.value())
+    ti.hide()
+  }
     if(this.value()=="/open rubix stimer"||this.value()=="/open rubix app"){ window.open("https://realparamesh.github.io/Rubixs-Stimer/")
   }
+  
 }
 
 function namekeep(){
@@ -249,4 +263,13 @@ function clock(){
   Hour%=12
   fill(clr.color());
   text(Hour+":"+min+":"+secs+noon, 250,50); 
+}
+
+function wfi(){
+  if(ti.show()==true){
+    abc=0
+  }
+  else{
+    abc=1
+  }
 }
